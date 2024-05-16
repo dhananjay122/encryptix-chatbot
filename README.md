@@ -1,0 +1,2 @@
+# Encryptix
+Artificial Intelligence
