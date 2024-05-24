@@ -43,6 +43,7 @@ def get_response(input_string):
     
     if "date" in input_string.lower():
         return random_responses.Date()
+    
     return random_responses.random_string()
 
 
