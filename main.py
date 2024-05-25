@@ -1,7 +1,7 @@
 import json
 import re
 import random_responses
-
+from flask import Flask,render_template,request
 
 def load_json(file):
     with open(file,'r') as bot_responses:
@@ -47,6 +47,18 @@ def get_response(input_string):
     return random_responses.random_string()
 
 
-while True:
-    user_input=input("you:")
-    print("Bot:", get_response(user_input))
+def process(input_str):
+    output=get_response(input_str)
+    return output
+        
+
+app=Flask(__name__)
+@app.route('/',methods=['GET','POST'])
+def process_input():
+    if request.method=='POST':
+        user_input=request.form['user_input']
+        final=process(user_input)
+        return render_template('index.html',final=final)
+    return render_template('index.html')
+if __name__=='__main__':
+    app.run(debug=True)

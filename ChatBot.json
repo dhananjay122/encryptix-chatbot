@@ -32,8 +32,13 @@
 },
 {"response_type":"question",
 "user_input":["can","i","contact","your","company"],
-"bot_response":"Of course try reaching www.XYZ.com website",
+"bot_response":"Of course try reaching www.DKH.com website",
 "required_words":["contact","you"]
-
+},
+{"response_type":"question",
+"user_input":["How","do","you","help","us"],
+"bot_response":"I will respond to the user based on the rules applied on me",
+"required_words":[]
 }
+
 ]
