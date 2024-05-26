@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat-Bot</title>
+    
+</head>
+<body>
+  <div class="chat-header">
+    <h1>Rule based Chat-Bot</h1>
+  </div>
+<div class="body">
+<form action="{{url_for('process_input')}}" method="POST">
+
+    <div class="bot-message">
+    <label text>User_Input:</label>
+    <input type="text" name="user_input" class="user-message"/>
+    </div>
+    <div class="bot-message">
+   
+    <label>Bot_Response:</label>
+    <p>{{final}}</p>
+   
+    </div> 
+
+</form>
+</div>
+</body>
+
+<style>
+.chat-header {
+  background-color: #3b3b58;
+  color: #fff;
+  padding: 10px;
+  padding-left: 35%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-decoration: wavy;
+  font-size: x-large;
+}
+
+.body {
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(39, 4, 76);
+}
+   
+.user-message {
+  background-color: #b3b0b7;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  
+  
+  
+}
+
+.bot-message {
+  background-color: #f7f7fa;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width:80%;
+  height:auto;
+  align-self: flex-end;
+  margin-left: 10px;
+  cursor: pointer;
+}
+label{
+    font-weight: bold;
+    font-size: larger;
+    text-decoration-color:rgb(14, 3, 26);
+}
+
+h1{
+  text-align:center;
+  color:#fff
+}
+input {
+  width: 300px;
+  min-height: 40px;
+  max-height: 200px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  overflow:scroll;
+}
+</style>
+</html>
